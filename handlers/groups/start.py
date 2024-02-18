@@ -52,7 +52,7 @@ async def stat_del(msg: types.Message):
 async def start_bot(message:types.Message):
     user = html.link(value=f"{message.from_user.full_name}", link=f"tg://user?id={message.from_user.id}")
     reaction_list = ["👍", "❤", "🔥", "🥰", "👏", "🎉", "🤩", "👌", "🕊", "😍", "❤‍🔥", "🌚", "⚡", "🏆", "👨‍💻", "👀", "😇", "🤝", "🤗", "🫡", "🗿", "🙉","😎"]
-    await message.reply(f"Salom {user}")
+    await message.reply(f"Salom {user}",disable_web_page_preview=True)
     try:
         await bot.set_message_reaction(
             chat_id=message.chat.id,
@@ -152,7 +152,7 @@ async def ads_delete(message):
                                                     can_pin_messages=False,
                                                 ),
                                                 until_date=time.time() + 60)
-                    await message.answer(f"{alert}\n{html.blockquote(value='👮🏻‍♂️ siz guruhdan vaqtinchaga <b>bloklandingiz</b>')}",reply_markup=add_group_button)
+                    await message.answer(f"{alert}\n{html.blockquote(value='👮🏻‍♂️ siz guruhdan vaqtinchaga <b>bloklandingiz</b>')}",reply_markup=add_group_button,disable_web_page_preview=True)
                 except:
                     try:
                         await message.delete()
@@ -161,13 +161,13 @@ async def ads_delete(message):
             else:
                 try:
                     await message.delete()
-                    await message.answer(alert,reply_markup=add_group_button)
+                    await message.answer(alert,reply_markup=add_group_button,disable_web_page_preview=True)
                 except:
                     pass
         else:
             try:
                 await message.delete()
-                await message.answer(alert,reply_markup=add_group_button)
+                await message.answer(alert,reply_markup=add_group_button,disable_web_page_preview=True)
                 advertisers.append(user_id)
             except:
                 pass
@@ -195,7 +195,7 @@ async def ads_delete(message):
                                                     can_pin_messages=False,
                                                 ),
                                                 until_date=time.time() + 60)
-                    await message.answer(f"{alert}\n{html.blockquote(value='👮🏻‍♂️ siz guruhdan vaqtinchaga <b>bloklandingiz</b>')}",reply_markup=add_group_button)
+                    await message.answer(f"{alert}\n{html.blockquote(value='👮🏻‍♂️ siz guruhdan vaqtinchaga <b>bloklandingiz</b>')}",reply_markup=add_group_button,disable_web_page_preview=True)
                 except:
                     try:
                         await message.delete()
@@ -204,13 +204,13 @@ async def ads_delete(message):
             else:
                 try:
                     await message.delete()
-                    await message.answer(alert,reply_markup=add_group_button)
+                    await message.answer(alert,reply_markup=add_group_button,disable_web_page_preview=True)
                 except:
                     pass
         else:
             try:
                 await message.delete()
-                await message.answer(alert,reply_markup=add_group_button)
+                await message.answer(alert,reply_markup=add_group_button,disable_web_page_preview=True)
                 advertisers.append(user_id)
             except:
                 pass

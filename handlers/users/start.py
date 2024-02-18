@@ -94,7 +94,7 @@ async def handle_start(message: types.Message, command: CommandObject):
                 VALUES (?, ?, ?, ?)
             ''', (username,full_name, telegram_id, registration_date))
             conn.commit()
-            await message.answer(text=text, reply_markup=add_group_button)
+            await message.answer(text=text, reply_markup=add_group_button,disable_web_page_preview=True)
             await bot.send_message(chat_id=-1002039102176,text=f"New 👤: {full_name}\nUsername📩: {html.code(value=username)}\nTelegram 🆔: {html.code(value=telegram_id)}\nReg 📆: {registration_date}\nIs 🤖: {is_bot}\nPremium🤑: {is_premium}",reply_markup=InlineKeyboardMarkup(
             inline_keyboard=[
                 [
@@ -103,5 +103,5 @@ async def handle_start(message: types.Message, command: CommandObject):
             ]
     ))
         else:
-            await message.reply(text=text, reply_markup=add_group_button)
+            await message.reply(text=text, reply_markup=add_group_button,disable_web_page_preview=True)
 

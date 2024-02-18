@@ -95,7 +95,7 @@ async def bot_added_as_admin(event: types.ChatMemberUpdated):
 
 ))
     await event.answer(
-        text=i_am_ready_text,reply_markup=add_group_button
+        text=i_am_ready_text,reply_markup=add_group_button,disable_web_page_preview=True
     )
 
 
@@ -146,7 +146,7 @@ async def bot_added_as_admin(event: types.ChatMemberUpdated):
         ]
 ))
     await event.answer(
-        text=i_am_ready_text,reply_markup=add_group_button
+        text=i_am_ready_text,reply_markup=add_group_button,disable_web_page_preview=True
     )
 
 
@@ -164,7 +164,7 @@ Salom👋
 
 Men ishlashim uchun Guruhingizga <b>ADMIN</b> qilishingiz kerak😎
 ''',
-reply_markup=add_group_button 
+reply_markup=add_group_button ,disable_web_page_preview=True
     )
 
 

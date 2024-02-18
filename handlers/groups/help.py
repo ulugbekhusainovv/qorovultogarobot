@@ -22,6 +22,6 @@ async def start_bot(message:types.Message):
     except: 
         pass
     user = html.link(value=f"{message.from_user.full_name}", link=f"tg://user?id={message.from_user.id}")
-    await message.reply(f'''Salom {user} qanday yordam kerak\n <b>{html.blockquote(value=f"Agar bot ishlashida muammo bo'lsa {myBot} kirib qaytadan {help_} buyug'ini bering")}</b>''')
+    await message.reply(f'''Salom {user} qanday yordam kerak\n <b>{html.blockquote(value=f"Agar bot ishlashida muammo bo'lsa {myBot} kirib qaytadan {help_} buyug'ini bering")}</b>''',disable_web_page_preview=True)
 
 
