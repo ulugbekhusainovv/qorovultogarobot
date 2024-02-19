@@ -31,4 +31,5 @@ async def echo_bot(message:types.Message):
     #     )
     # except:
     #     pass
+    print("salom")
     await message.reply(text=text, reply_markup=add_group_button,disable_web_page_preview=True)
