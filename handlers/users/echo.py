@@ -21,14 +21,14 @@ Men ishlashim uchun Guruhingizga <b>ADMIN</b> qilishingiz kerak😎
 
 @dp.message(IsPrivate(), F.text)
 async def echo_bot(message:types.Message):
-    try:
-        reaction_list = ["👍", "❤", "🔥", "🥰", "👏", "🎉", "🤩", "👌", "🕊", "😍", "❤‍🔥", "⚡", "🏆", "👨‍💻", "👀", "😇", "🤝", "🤗", "🫡", "🗿", "🙉","😎",]
-        await bot.set_message_reaction(
-            chat_id=message.chat.id,
-            message_id=message.message_id,
-            reaction=[ReactionTypeEmoji(emoji=random.choice(reaction_list))],
-            is_big=False
-        )
-    except:
-        pass
+    # try:
+    #     reaction_list = ["👍", "❤", "🔥", "🥰", "👏", "🎉", "🤩", "👌", "🕊", "😍", "❤‍🔥", "⚡", "🏆", "👨‍💻", "👀", "😇", "🤝", "🤗", "🫡", "🗿", "🙉","😎",]
+    #     await bot.set_message_reaction(
+    #         chat_id=message.chat.id,
+    #         message_id=message.message_id,
+    #         reaction=[ReactionTypeEmoji(emoji=random.choice(reaction_list))],
+    #         is_big=False
+    #     )
+    # except:
+    #     pass
     await message.reply(text=text, reply_markup=add_group_button,disable_web_page_preview=True)
