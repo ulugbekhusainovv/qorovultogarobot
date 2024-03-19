@@ -7,11 +7,10 @@ from filters import IsGroup
 async def join_group(message: types.Message):
     joins = message.new_chat_members
     members = ', '.join([html.link(value=f"{m.full_name}", link=f"tg://user?id={m.id}") for m in joins])
-
     try:
         await message.delete()
         data = await message.answer(f"Xush kelibsiz {members}")
-        await asyncio.sleep(3)
+        await asyncio.sleep(5)
         await data.delete()
     except:
         pass

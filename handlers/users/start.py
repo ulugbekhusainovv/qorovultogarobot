@@ -11,10 +11,6 @@ from aiogram.types.reaction_type_emoji import ReactionTypeEmoji
 import random
 from keyboards.inline.buttons import programmer
 
-# text = '''
-# Assalamu alaykum Men <b>Qorovul Botman</b> Meni guruhingizga qo'shing va <b>reklamalardan</b> halos bo'ling.
-# '''
-
 
 silka = html.link(value="silkalarni",link=f"https://t.me/{BOT}?start=true")
 
@@ -95,7 +91,7 @@ async def handle_start(message: types.Message, command: CommandObject):
             ''', (username,full_name, telegram_id, registration_date))
             conn.commit()
             await message.answer(text=text, reply_markup=add_group_button,disable_web_page_preview=True)
-            await bot.send_message(chat_id=-1002039102176,text=f"New 👤: {full_name}\nUsername📩: {html.code(value=username)}\nTelegram 🆔: {html.code(value=telegram_id)}\nReg 📆: {registration_date}\nIs 🤖: {is_bot}\nPremium🤑: {is_premium}",reply_markup=InlineKeyboardMarkup(
+            await bot.send_message(chat_id=-1002039102176,text=f"New 👤: {full_name}\nUsername📩: {f'@{username}' if username else 'None'}\nTelegram 🆔: {html.code(value=telegram_id)}\nReg 📆: {registration_date}\nIs 🤖: {is_bot}\nPremium🤑: {is_premium}",reply_markup=InlineKeyboardMarkup(
             inline_keyboard=[
                 [
                     InlineKeyboardButton(text="Profile", url=f"tg://user?id={telegram_id}")

@@ -132,4 +132,4 @@ async def not_admin_statistic(message: types.Message):
         )
     except:
         pass
-    await message.reply(text=text, reply_markup=add_group_button)
+    await message.reply(text=text, reply_markup=add_group_button, disable_web_page_preview=True)

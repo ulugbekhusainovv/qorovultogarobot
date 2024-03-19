@@ -9,7 +9,6 @@ add_group_button = InlineKeyboardMarkup(
     ]
 )
 
-
 programmer = InlineKeyboardMarkup(
     inline_keyboard=[
         [
