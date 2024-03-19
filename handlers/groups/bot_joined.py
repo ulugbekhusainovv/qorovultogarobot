@@ -34,9 +34,8 @@ Salom👋
 
 Men guruhda ishlashga <b>tayyorman😎</b>
 
-{html.blockquote(value="<b>🚫Eslatma Men Guruh Egasi tashlagan reklamalarni o'chirmayman.</b>")}
+{html.blockquote(value="<b>🚫Eslatma Men Guruh Adminlari tashlagan reklamalarni o'chirmayman.</b>")}
 '''
-
 
 async def is_group_registered(group_id):
     cursor.execute('''
